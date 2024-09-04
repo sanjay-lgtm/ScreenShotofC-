@@ -1,0 +1,238 @@
+			**C#**
+
+C# is a cross plateform general purpose lanuage that makes developers productive while writing heigly performaent code.
+C# is the most popular .NET language.
+C# is case sensitive language.
+
+
+comments in C# --
+// --for single comments
+/*... */ -- multiline comments
+
+
+"Hello World" program in C#--
+
+//This line prints, "Hello World"
+Console.WriteLine("Hello World");
+
+-----------------------------------------------------------
+using System;
+class Hello {
+	static void Main(){
+		Console.WriteLine("Hello World");
+	}
+}
+----------------------------------------------------------
+The "Hello World" program starts with a using directive  that refrence the System namespace.
+
+NameSpace --
+ 		A nameSpace is used to organize your code and is collection of classes, interfaces, structures, enums and delegates.
+
+Main Method -- entry point into the application.
+
+** Rading and Writing in c# ---
+
+In c# use Console.ReadLine for take user defined Input.
+and console.WriteLine for static input or says system defined input.
+------------------------------------------------------------
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Please enter your name = ");
+        string Useraname = Console.ReadLine();
+        Console.WriteLine("Hello " + Useraname);
+    }
+}
+----------------------------------------------------------
+try also this way for concatination in c#--
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Please enter your name = ");
+        string Useraname = Console.ReadLine();
+        //Console.WriteLine("Hello " + Useraname);
+
+        Console.WriteLine("Hello {0}", Useraname);
+    }
+}
+-------------------------------------------------------------
+also this way ---
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Please enter your Firstname = ");
+        string Firstname = Console.ReadLine();
+        Console.WriteLine("Please enter your Lastname = ");
+        string Lastname  = Console.ReadLine();
+
+        Console.WriteLine("Hello {0}, {1}", Firstname, Lastname);
+    }
+}
+------------------------------------------------------------------
+
+
+In c# the boolean value defined as --- bool 
+like 
+bool a;
+a = true;
+
+Datatype in c# --
+1.sbyte 
+2.byte
+3.char
+4.short
+5.ushort
+6.int
+7.uint
+8.long
+9.ulong
+
+
+** Check Datatype Range in c# --
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Min {0}", int.MinValue);
+        Console.WriteLine("Max {0}", int.MaxValue);
+    }
+
+}
+
+------------------------------------------------------------
+Built in types in C# ---
+
+1.String --- store in double quotes("").
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string name = "Sanjay";
+        Console.WriteLine(name);
+    }
+
+}
+
+\n -- for new line
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string name = "One\nTwo\nThree";
+        Console.WriteLine(name);
+    }
+
+}
+
+---------------------------------------
+**Operator in C# ---
+1.Assignment Operator = 
+2.Aithmatic Operator + , - , * , / , %
+3.Comperision Operator == , != , > , >= , < , <=
+4.Conditional Operator && , ||
+5.Ternary Operator ? , :
+6.Null Coalescing Operator ??
+
+1.Airthmatic Operator --
+perform mathmatical operations
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int Numrator = 10; //Assignment Operator
+        int Denaominator = 5;
+
+        int result = Numrator / Denaominator;
+        Console.WriteLine("result {0}",result);
+    }
+
+}
+
+3. Conditional Operator
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int Number = 10;
+        int AnotherNumber = 20;
+
+        if (Number == 10 && AnotherNumber == 20) {
+            Console.WriteLine("Hello Conditional operator!!");
+        }
+    }
+
+}
+
+4.Ternary Operator --
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int Number = 10;
+
+        bool isNumeric = Number == 10 ? true : false; 
+
+        Console.WriteLine("The Number == 10 is {0} ",isNumeric);   
+        
+    }
+}
+
+
+** Nullable Value ---
+if the user has 2 option for choose like yes or not but they didn't choose anyone then that value store as a form of nullable or null.
+using System;
+
+class Program
+{
+    static void Main()
+    {
+
+        bool? AreYouMajor = null;
+
+        if (AreYouMajor == true)
+        {
+            Console.WriteLine("User are Major");
+        }
+        else if (AreYouMajor == false) {
+            Console.WriteLine("User are not Major");
+        }
+        else
+        {
+            Console.WriteLine("User didn't choose any option");
+        }
+        
+    }
+
+}
+
+
+** Nullable type in c# --
+ 
+In C# types are divide into 2 board categories -
+Value Type - int , float , double , structs, enums etc.
+Refrence Type - Interface , Class , delegates , arrays etc.
